@@ -6,10 +6,10 @@ body {
 }
 
 header {
-    background-image: url('https://github.com/NishantaBaral/nishantabaral.github.io/blob/main/Pokhara_at_dawn.jpg'); /* Replace with the actual path to your image */
+    background-image: url('Pokhara_at_dawn.jpg'); /* Replace with the actual path to your image */
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: 202px;
     border-bottom: 2px solid #ffa07a;
     display: flex;
     align-items: center;
