@@ -1,66 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:wght@400&display=swap');
+
 body {
     margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f9f3e6;
 }
 
 header {
-    background-image: url('Pokhara_at_dawn.jpg'); /* Replace with the actual path to your image */
+    background-image: url('figures/header.png'); 
     background-size: cover;
     background-position: center;
-    height: 202px;
-    border-bottom: 2px solid #ffa07a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.header-container {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.header-container h1 {
-    margin: 0;
-    color: #000;
-    font-size: 24px;
-    background-color: rgba(255, 160, 122, 0.8);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-}
-
-.header-right input {
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.header-right span {
-    color: #000;
-    background-color: rgba(255, 160, 122, 0.8);
-    padding: 5px 10px;
-    border-radius: 5px;
+    height: 130px; /* Adjust the height as needed */
 }
 
 main {
-    padding: 20px;
+    background-color: #f5f5dc;
+    color: #8b0000;
+    text-align: center;
+    padding: 0px 0;
 }
 
-.main-content {
-    background-color: #e5ded1;
-    padding: 20px;
-    border-radius: 5px;
+h1 {
+    font-family: 'Fahkwang', sans-serif;
+    letter-spacing: 0;
+    line-height: 1.7;
+    font-size: 50px;
+    margin: 0;                       
+    padding-top: 10px;   
+    border-top: 2px solid black;         /* Added for top border */
+    padding: 10px 0;                     /* Adjust padding for spacing around text */       
+}
+
+/* Contact Section Styles */
+.contact {
+    background-color: #f5f5dc; /* Light beige background */
+    padding: 0px;
+    text-align: center;
+    margin: 20px auto;
+    font-family: 'Playfair Display', serif; /* Matching font */
+    max-width: 600px;
+    margin: 0 auto; /* Center alignment and remove margin-bottom */
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: #2E8B57; /* Sea Green color */
+    margin: 0; /* Reduce margin-bottom */
+    padding: 0; /* Remove padding */
+}
+
+.contact p {
+    font-size: 18px;
+    color: #8B4513; /* Saddle Brown color for email */
+    margin: 0;
+    padding: 0; /* Remove padding */
+}
+
+.contact p a {
+    color: #8B4513; /* Match the text color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact p a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.recent-works h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif; /* Change this to 'Lora' or 'Libre Baskerville' if preferred */
+    font-size: 48px;
+    color: #2E8B57; /* Indigo color */
+}
+
+.works-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: space-between; /* Distribute items evenly */
+    gap: 20px; /* Adjusted gap for spacing */
+    padding: 0 20px; /* Added padding for spacing on the ends */
+}
+
+.work-item {
+    flex: 1 1 calc(33.333% - 40px); /* Ensure all items take up equal width and wrap */
+    text-align: center;
+    margin-bottom: 20px; /* Add some space between rows */
+}
+
+.work-item img {
+    width: 100%;
+    height: 300px; /* Fixed height to ensure uniform size */
+    object-fit: contain; /* Ensures images cover the space uniformly */
+    border-radius: 8px;
+}
+
+.work-item p {
+    font-family: 'Merriweather', serif; /* Elegant font */
+    font-size: 16px;
+    color: #555555; /* Subtle color */
+    font-style: italic; /* Italicized text */
+    position: relative;
+    margin-top: 10px;
+}
+
+.work-item p::before, .work-item p::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #555;
+    margin: 10px auto;
+}
+
+/* Divider Styles */
+.divider {
+    width: 90%;
+    height: 3px;
+    background-color: #8b0000; /* Dark red color for the divider */
+    margin: 10px auto; /* Further reduced space above and below the divider */
+}
+
+/* Course Materials Link Styles */
+.course-materials-link {
+    background-color: #f5f5dc;
+    padding: 10px 0; /* Further reduced padding */
+}
+
+.course-materials-link h2 {
+    font-family: 'Playfair Display', serif; /* Change this to 'Lora' or 'Libre Baskerville' if preferred */
+    font-size: 40px;
+    color: #2E8B57; 
+    margin: 0;
+    position: relative;
+    padding-top: 0px;
+}
+
+.course-materials-link h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #2E8B57; /* Match the text color */
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.course-materials-link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #8B4513; /* Saddle Brown color */
+    font-size: 24px;
+    font-style: italic; /* Italicize the text */
+    text-decoration: underline; /* Underline the text */
+    border-radius: 8px;
+    padding-top: 20px;
+    transition: transform 0.2s;
+}
+
+.course-materials-link a:hover {
+    transform: translateY(+3px); /* Slight lift on hover */
+}
+
+.course-materials-link img.course-icon {
+    width: 200px;
+    height: 200px;
+    margin-right: 15px;
+}
+
+.footer {
+    background-color: #F5F5DC; /* Match the body color */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #8B0000; /* Divider line color */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6c757d; /* Neutral color for text */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .works-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-item {
+        flex: 1 1 100%;
+        max-width: 500px; /* Ensure images do not get too large on smaller screens */
+    }
+
+    .work-item img {
+        height: auto; /* Let height adjust according to width */
+    }
+
+    .course-materials-link a {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .course-materials-link img.course-icon {
+        margin: 0 0 10px 0; /* Margin below the image */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .contact h2,
+    .recent-works h2,
+    .course-materials-link h2 {
+        font-size: 28px;
+    }
+
+    .contact p,
+    .course-materials-link a {
+        font-size: 18px;
+    }
 }
