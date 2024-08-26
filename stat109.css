@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc; /* Light beige background */
+    color: #8b0000; /* Dark red text color */
+}
+
+main {
+    padding: 20px;
+}
+
+.course-materials {
+    text-align: center;
+    margin: 20px;
+}
+
+.course-materials h2 {
+    color: #2E8B57;
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    text-decoration: underline;
+}
+.module-heading {
+    font-size: 24px;
+    color: #2E8B57; /* Adjust the color to match your theme */
+    margin-bottom: 10px; /* Add some space below the module heading */
+    text-align: left; /* Align text to the left */
+    padding-left: 18px; /* Adjust padding to align with the chapters */
+}
+.accordion {
+    background-color: #2E8B57;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px; /* Add margin-bottom to create space between buttons */
+}
+
+.accordion-button {
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.4s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-button:hover {
+    background-color: #ddd;
+}
+
+.accordion-button:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion-button.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.panel ul {
+    display: flex;
+    flex-direction: row; /* Ensure items are in a row */
+    flex-wrap: wrap;
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+}
+
+
+.panel ul li {
+    margin-right: 20px; /* Add space between the items */
+}
+
+.panel ul li a {
+    text-decoration: underline; /* Underline the text */
+    color: #2E8B57;
+    font-weight: bold;
+}
+
+.panel ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .panel ul {
+        flex-direction: column; /* Stack items in a single column on smaller screens */
+    }
+
+    .panel ul li {
+        margin-right: 0;
+        margin-bottom: 10px; /* Add space between items */
+    }
+}
+
+@media (max-width: 480px) {
+    .course-materials h2 {
+        font-size: 24px;
+    }
+
+    .accordion {
+        font-size: 16px;
+    }
+
+    .panel ul li a {
+        font-size: 16px;
+    }
+}

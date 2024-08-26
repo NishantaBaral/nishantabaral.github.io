@@ -121,6 +121,29 @@ h1 {
 }
 
 /* Course Materials Link Styles */
+
+/* Container for the course materials */
+.courses-container {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly across the container */
+    align-items: flex-start; /* Align items to the top */
+    margin-top: 20px;
+    padding-left: 20px; /* Maintain some padding on the left */
+    padding-right: 20px; /* Add padding on the right for balance */
+}
+
+.course-item {
+    flex: 0 0 auto; /* Ensure the item takes up only the space it needs */
+    text-align: left; /* Ensure text within the item is aligned to the left */
+}
+
+.course-item img.course-icon {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+
 .course-materials-link {
     background-color: #f5f5dc;
     padding: 10px 0; /* Further reduced padding */
@@ -209,20 +232,54 @@ h1 {
         margin: 0 0 10px 0; /* Margin below the image */
     }
 }
+@media (max-width: 768px) {
+    /* Recent Works Section */
+    .works-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .work-item {
+        flex: 1 1 100%;
+        max-width: 500px;
+    }
+    .work-item img {
+        height: auto;
+    }
+
+    /* Course Materials Section */
+    .courses-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .course-item {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .course-item img.course-icon {
+        margin-bottom: 10px;
+    }
+}
 
 @media (max-width: 480px) {
     h1 {
         font-size: 36px;
     }
-
     .contact h2,
     .recent-works h2,
     .course-materials-link h2 {
         font-size: 28px;
     }
-
     .contact p,
     .course-materials-link a {
+        font-size: 18px;
+    }
+
+    /* Additional small-screen adjustments for courses */
+    .course-item img.course-icon {
+        width: 120px;
+        height: 120px;
+    }
+    .course-item a {
         font-size: 18px;
     }
 }
